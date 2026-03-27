@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us - Olive Garden Delight</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">Olive Garden Delight</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html" class="cart-icon">Cart <span id="cart-count">0</span></a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 40px;">
+            <div style="flex: 1; min-width: 300px;">
+                <h1 style="color: var(--primary-color); margin-bottom: 20px;">Our Story</h1>
+                <p>Founded in 2024, Olive Garden Delight was born out of a passion for fresh, organic ingredients and authentic Mediterranean flavors. We believe that eating healthy should be a delight, not a chore.</p>
+                <br>
+                <h3>Our Mission</h3>
+                <p>To serve the community with meals that nourish the body and satisfy the soul.</p>
+            </div>
+            <div style="flex: 1; min-width: 300px; overflow: hidden; border-radius: 15px;">
+                <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=600" style="width:100%; transition: transform 0.5s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+        </div>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

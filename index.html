@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olive Garden Delight | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">Olive Garden Delight</a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i><span id="cart-count">0</span></a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <header class="hero">
+        <h1>Fresh Taste, Healthy Choice</h1>
+        <p>Experience the finest Mediterranean inspired cuisine in the heart of Bangalore.</p>
+        <a href="menu.html" class="btn btn-primary">Order Now</a>
+    </header>
+
+    <section class="container">
+        <h2 class="section-title">Our Featured Items</h2>
+        <div class="menu-grid" id="featured-items">
+            <!-- Reuse script to show 3 items or hardcode -->
+        </div>
+    </section>
+
+    <div id="toast">Item added!</div>
+    <script src="script.js"></script>
+    <script>
+        // Special logic for home page to show only top 3
+        window.onload = () => {
+            updateCartCount();
+            renderMenu(menuItems.slice(0, 3));
+        }
+    </script>
+    <script type="module" src="firebase.js"></script>
+</body>
+</html>
