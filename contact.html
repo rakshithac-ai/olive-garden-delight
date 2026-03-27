@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us - Olive Garden Delight</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">Olive Garden Delight</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i><span id="cart-count">0</span></a></li>
+        </ul>
+    </nav>
+
+    <div class="container" style="max-width: 800px;">
+        <h1 class="section-title">Get In Touch</h1>
+        <form id="contactForm" onsubmit="validateForm(event)" style="background: white; padding: 30px; border-radius: 10px; box-shadow: var(--shadow);">
+            <div style="margin-bottom: 15px;">
+                <label>Name</label><br>
+                <input type="text" id="name" required style="width:100%; padding:10px; margin-top:5px;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label>Email</label><br>
+                <input type="email" id="email" required style="width:100%; padding:10px; margin-top:5px;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label>Message</label><br>
+                <textarea id="message" required style="width:100%; padding:10px; margin-top:5px;" rows="5"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+        
+        <div style="margin-top: 40px; text-align: center;">
+            <p><strong>Address:</strong> Bangalore, India</p>
+            <p><strong>Phone:</strong> +91 9876543210</p>
+            <p><strong>Email:</strong> contact@olivegardendelight.com</p>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+    <script>
+        function validateForm(e) {
+            e.preventDefault();
+            alert('Thank you! Your message has been sent successfully.');
+            document.getElementById('contactForm').reset();
+        }
+    </script>
+</body>
+</html>
